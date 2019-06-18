@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Nombre</th>
+                                <th class="text-center">Apellido</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Correo electronico</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="user : ${users}">
+                                <td class="text-center" th:text="${user.nombre}" />
+                                <td class="text-center" th:text="${user.apellido}" />
+                                   <!--<td class="text-center" th:text="${user.status}" />-->
+                                <td class="text-center" th:text="${user.correo}" />
+                                <td class="text-center">
+                                    <a class="btn btn-default" th:href="@{/users/__${user.id}__/edit}" th:text="Actualizar"/></a>
+                                    <form th:action="@{/users/__${user.id}__/delete}" method="POST" style="display:inline-block;"> 
+                                        <button type="submit" class="btn btn-default">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+    </body>
+</html>

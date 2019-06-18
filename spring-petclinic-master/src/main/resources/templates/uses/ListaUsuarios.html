@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'usuarios')}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+    <body>
+        <h2>Listado de usuarios</h2>
+        <div style="display:flex; justify-content: space-between; aling-items: center" > 
+            <div>
+                <a href="usuarios/create" class="btn btn-default">Agregar nuevo usuario </a>  
+                 
+                <a href="usuarios/reporte" class="btn btn-default">Reporte de usuarios </a>
+            </div>
+        </div>
+  
+        <table  class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Apellido</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Avatar</th>
+                    <!--<th class="text-center">Acciones</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${selections}">
+                    <td style="line-height:36px;" class="text-center" th:text="${user.nombre}"/>
+                    <td style="line-height:36px;" class="text-center" th:text="${user.apellido}"/>
+                    <td style="line-height:36px;" class="text-center" th:text="${user.correo}"/>
+                    <td class="text-center" style="line-height:36px;">
+                     <!--img style="width:35px; box-shadow: 1px 2px 4px #000; height: 35px; border-radius:50%;" src="https://image.flaticon.com/icons/svg/912/912214.svg"-->
+                    </td>
+                    <td class="text-center">
+                        <a th:href="@{usuarios/__${user.Id}__/edit}" class="btn btn-default">Editar</a>
+                        <form  method="POST"  th:action="@{/usuarios/__${user.id}__/delete}" style="display:inline-block;">
+                            <button type="submit" class="btn-default btn" >Eliminar </button>
+                        </form>  
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
