@@ -24,7 +24,7 @@ import org.springframework.samples.petclinic.visit.Visit;
 
 /**
  *
- * @author JuniorFaviel
+ * @author SPEK1
  */
 @Entity 
 @Table(name = "pet_images")

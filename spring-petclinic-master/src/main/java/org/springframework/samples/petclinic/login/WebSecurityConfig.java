@@ -23,7 +23,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 /**
  *
- * @author Oswaldo
+ * @author SPEK1
  */
 @Configuration
 @EnableWebSecurity

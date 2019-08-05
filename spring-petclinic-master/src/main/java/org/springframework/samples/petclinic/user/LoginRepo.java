@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author Oswaldo
+ * @author SPEK1
  */
 interface LoginRepo extends Repository< UserSession, Integer>{
     

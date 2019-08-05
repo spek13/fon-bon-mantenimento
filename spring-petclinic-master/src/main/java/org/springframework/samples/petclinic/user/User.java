@@ -16,7 +16,7 @@ import org.springframework.core.style.ToStringCreator;
 
 /**
  *
- * @author fabian
+ * @author SPEK1
  */
 @Entity
 @Table(name = "users")

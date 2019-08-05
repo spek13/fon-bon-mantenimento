@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
- * @author JuniorFaviel
+ * @author SPEK1
  */
 @Service
 public class UploadFileService {

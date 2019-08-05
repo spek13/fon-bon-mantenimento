@@ -16,7 +16,7 @@ import org.springframework.samples.petclinic.model.BaseEntity;
 
 /**
  *
- * @author Oswaldo
+ * @author SPEK1
  */
 @Entity
 @Table(name = "user_sessions")

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
- * @author Oswaldo
+ * @author SPEK1
  */
 public class LogouController {
     

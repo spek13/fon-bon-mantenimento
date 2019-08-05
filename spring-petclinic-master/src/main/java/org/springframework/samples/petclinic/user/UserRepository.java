@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author fabian
+ * @author SPEK1
  */
 interface UserRepository extends Repository< User, Integer>{
     

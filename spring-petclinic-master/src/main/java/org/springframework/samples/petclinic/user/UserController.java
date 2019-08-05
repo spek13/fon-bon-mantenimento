@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
- * @author fabian
+ * @author SPEK1
  */
     @Controller
     class UserController {

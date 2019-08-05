@@ -31,7 +31,7 @@ import java.nio.file.Paths;
 import java.io.IOException;
 /**
  *
- * @author JuniorFaviel
+ * @author SPEK1
  */
 
 

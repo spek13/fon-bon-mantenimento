@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  *
- * @author Oswaldo
+ * @author SPEK1
  */
 @Controller
 public class LoginController {
